@@ -19,5 +19,5 @@
 - [x] Create a new branch
 - [x] Switch between branches
 - [x] Stage/commit on different branches
-- [ ] Make a PR (Pull Request)
-- [ ] Make a happy merge
+- [x] Make a PR (Pull Request)
+- [x] Make a happy merge
