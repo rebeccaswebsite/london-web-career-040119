@@ -21,3 +21,4 @@
 - [x] Stage/commit on different branches
 - [x] Make a PR (Pull Request)
 - [x] Make a happy merge
+- [x] Happy now?
