@@ -17,7 +17,7 @@
 ### Branching & Merging
 
 - [x] Create a new branch
-- [ ] Switch between branches
-- [ ] Stage/commit on different branches
+- [x] Switch between branches
+- [x] Stage/commit on different branches
 - [ ] Make a PR (Pull Request)
 - [ ] Make a happy merge
