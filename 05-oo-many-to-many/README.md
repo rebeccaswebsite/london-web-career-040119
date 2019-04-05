@@ -1,5 +1,7 @@
 # Object Oriented - Many to Many
 
+<img src='mtm.png' />
+
 ## Domain: Uber clone
 
 ## Steps followed:
