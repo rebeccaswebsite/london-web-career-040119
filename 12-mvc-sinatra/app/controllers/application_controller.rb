@@ -4,30 +4,35 @@ class ApplicationController < Sinatra::Base
 
   # INDEX
   get '/games' do
-    # @games = Game.all
+    @games = Game.all
     erb :index
   end
 
+  # NEW
   get '/games/new' do
     erb :new
   end
 
+  # SHOW
   get '/games/:id' do
     @game = Game.find(params[:id])
     erb :show
   end
 
+  # GAME
   post '/games' do
     @game = Game.create(params)
     erb :show
   end
 
+  # EDIT
   get '/games/:id/edit' do
     @game = Game.find(params[:id])
     erb :edit
   end
 
-  patch "/games/:id" do
+  # UPDATE
+  patch '/games/:id' do
     Game.update(params)
   end
 end
