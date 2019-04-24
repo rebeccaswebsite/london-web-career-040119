@@ -1,0 +1,6 @@
+<% Game.all.each do |game| %>
+  <a href="/games/<%= game.id %>">
+    </br>
+    <%= game.name %>
+  </a>
+<% end%>
