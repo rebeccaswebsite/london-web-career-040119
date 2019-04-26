@@ -1,8 +1,13 @@
 <h1>All the dogs 🐶</h1>
 
+<a href="/dogs/new">Create a new dog</a>
+
 <ul>
   <% @dogs.each do |dog| %>
     <li>
+      <button>
+        <a href="/dogs/<%= dog.id %>/edit"> edit </a>
+      </button>
       <a href="/dogs/<%= dog.id %>"> <%= dog.name %> </a>
     </li>
   <% end %>
