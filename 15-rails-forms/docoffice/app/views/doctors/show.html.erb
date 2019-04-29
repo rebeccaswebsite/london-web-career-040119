@@ -1,0 +1,6 @@
+<h2>name: <%= @doctor.name %></h2>
+<h3>specialty: <%= @doctor.specialty %></h3>
+
+<%= link_to 'go back', doctors_path %>
+
+<%= link_to 'edit', edit_doctor_path(@doctor) %>
