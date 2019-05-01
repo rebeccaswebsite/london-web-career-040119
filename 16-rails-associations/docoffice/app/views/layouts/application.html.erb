@@ -10,7 +10,16 @@
   </head>
 
   <body>
-    <h1>Get yo' health fixed up here 🏥👩‍⚕️👨‍⚕️👩‍🔧👨‍🔧</h1>
+    <h1> <%= link_to "Get yo' health fixed up here 🏥👩‍⚕️👨‍⚕️👩‍🔧👨‍🔧", doctors_path %> </h1>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <p style="color: red;"> 
+          <%= error %>
+        </p>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

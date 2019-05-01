@@ -14,7 +14,12 @@ class DoctorsController < ApplicationController
 
   def create
     doctor = Doctor.create (doctor_params)
-    redirect_to doctor
+    if doctor.valid?
+      redirect_to doctor
+    else
+      flash[:errors] = doctor.errors.full_messages
+      redirect_to new_doctor_path
+    end
   end
 
   def edit
