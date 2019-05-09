@@ -16,14 +16,6 @@ We're going to 'hack' our little application, so we can get access to editing se
 
 [PlainTextOffenders](http://plaintextoffenders.com/)
 
-Let's pretend that you, as a hacker, have gained the access to the developers computer. We are able to edit the code and our goal is to build a comprehensive report on how this app handles auth.
-
-In the real world, a job like that would be called penetration testing. People who do that are often called security researchers or pentesters.
-
-Though it is rare that a pentester would have access to a computer with the source code, this is an assumption we're making for the purpose of today's lecture.
-
-LETS DO IT
-
 [Hackers IRL](https://www.youtube.com/watch?v=qbWqXKN3m3c)
 
 1. Un-comment bcrypt from the `Gemfile`, `bundle install`. Why are we doing it?
