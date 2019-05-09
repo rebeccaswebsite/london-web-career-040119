@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Docoffice</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= session.id %>
+    <%= session[:doctors_seen] %>
+    <h1> <%= link_to "Get yo' health fixed up here 🏥👩‍⚕️👨‍⚕️👩‍🔧👨‍🔧", doctors_path %> </h1>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <p style="color: red;"> 
+          <%= error %>
+        </p>
+      <% end %>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

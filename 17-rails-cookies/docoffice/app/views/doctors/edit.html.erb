@@ -1,0 +1,9 @@
+<h2>edit <%= @doctor.name %></h2>
+
+<%= render 'form' %>
+
+<%= form_tag doctor_path(@doctor), method: "delete" do  %>
+  <%= submit_tag "Delete Doctor" %>
+<% end %>
+
+<%= link_to 'go back', doctor_path(@doctor) %>
