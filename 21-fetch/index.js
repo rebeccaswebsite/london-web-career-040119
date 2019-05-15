@@ -3,7 +3,7 @@ const formEl = document.querySelector('#new-book-form')
 
 function addBook (book) {
   const tr = document.createElement('tr')
-  
+
   tr.innerHTML = `
     <td>${book.title}</td>
     <td>${book.description}</td>
@@ -27,12 +27,13 @@ function addBooks (books) {
 formEl.addEventListener('submit', function(event) {
 	event.preventDefault()
 
-	let title = formEl.title.value
-	const desc = formEl.desc.value
-	const year = formEl.year.value
+  let book = {}
+	book.title = formEl.title.value
+	book.description = formEl.description.value
+	book.year = formEl.year.value
 
-  if (title.length > 3) {
-    addBook(title, desc, year)
+  if (book.title.length > 3) {
+    addBook(book)
     formEl.reset()
   } else {
     alert('title is too short...')
@@ -41,16 +42,18 @@ formEl.addEventListener('submit', function(event) {
 
 // get all books from the server
 function getBooks() {
-	return fetch('http://localhost:3000/books')
-		.then((resp) => resp.json())
+  return fetch('http://localhost:3000/books')
+    .then((resp) => resp.json())
 }
 
 // delete a book from the server
-function deleteBook (id) {
-	return fetch(`http://localhost:3000/books/${id}`, {
-		method: 'DELETE'
-	})
-}
+const deleteBtn = t.body.querySelector('.delete-btn')
+deleteBtn.addEventListener('click',
+    function deleteBook (id) {
+      return fetch(`http://localhost:3000/books/${id}`, {
+        method: 'DELETE'
+      })
+})
 
 getBooks()
 	.then((books) => addBooks(books))

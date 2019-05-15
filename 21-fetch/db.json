@@ -1,3 +1,10 @@
 {
-  "books": []
+  "books": [
+    {
+      "id": 1,
+      "title": "Harry Potter",
+      "description": "wizarding",
+      "year": 1992
+    }
+  ]
 }
